@@ -1,0 +1,32 @@
+TradingApi
+=========
+
+A basic wrapper for ebay Trading API. Since the Trading API is such a big beast modules/classes should be added to cover the wanted area of functionality. The GetItem class is included as an example of usage.
+
+Example
+=======
+
+item = TradingApi::GetItem.new('1231231')
+puts item.url
+
+Extend
+======
+
+Let's add the GeteBayOfficialTimeRequest API call:
+
+module TradingApi
+  class GeteBayOfficialTimeRequest < CallName
+    def custom_xml
+      nil
+    end
+    
+    def timestamp
+      xml_response.at('Timestamp').text
+    end
+  end
+end
+
+time = TradingApi::GeteBayOfficialTimeRequest.new
+time.timestamp
+
+Copyright (c) 2010 Andrea Longhi, released under the MIT license

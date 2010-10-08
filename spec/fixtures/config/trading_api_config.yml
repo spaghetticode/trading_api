@@ -1,0 +1,20 @@
+development:
+  url: https://api.ebay.com/ws/api.dll
+  dev_name: your-dev-name
+  app_name: your-app-name
+  cert_name: your-app-cert-name
+  auth_token: your-auth-token
+  
+test:
+  url: https://api.ebay.com/ws/api.dll
+  dev_name: your-dev-name
+  app_name: your-app-name
+  cert_name: your-app-cert-name
+  auth_token: your-auth-token
+  
+production:
+  url: https://api.ebay.com/ws/api.dll
+  dev_name: your-dev-name
+  app_name: your-app-name
+  cert_name: your-app-cert-name
+  auth_token: your-auth-token
